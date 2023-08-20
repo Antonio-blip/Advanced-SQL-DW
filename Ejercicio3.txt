@@ -1,0 +1,7 @@
+-- Create the clean_integer function
+CREATE OR REPLACE FUNCTION keepcoding.clean_integer(input_value INT64) AS (
+    CASE WHEN input_value IS NULL THEN -999999 ELSE input_value END
+);
+
+-- Show a message indicating the function creation
+SELECT 'clean_integer function has been created' AS message;
